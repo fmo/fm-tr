@@ -11,7 +11,7 @@ services:
     container_name: mysql
     image: mysql:8.0
     volumes:
-      -  db_data:/var/lib/mysql
+      -  db_fm_data:/var/lib/mysql
     restart: always
     ports:
       -  "3306:3306"
@@ -22,7 +22,7 @@ services:
       MYSQL_PASSWORD: 123123
 
 volumes:
-  db_data: {}
+  db_fm_data: {}
 
 networks:
   net:
