@@ -1,3 +1,23 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+admin:
+  path: /admin
+  controller: App\Controller\AdminController
+
+countries:
+  path: /countries
+  controller: App\Controller\Country\ListController
+
+addCountry:
+  path: /addCountry
+  controller: App\Controller\Country\AddController
+
+editCountry:
+  path: /editCountry
+  controller: App\Controller\Country\EditController
+
+deleteCountry:
+  path: /deleteCountry
+  controller: App\Controller\Country\DeleteCountry
+
+fetchCountries:
+  path: fetch-countries
+  controller: App\Controller\RapidAPI\CountryController
