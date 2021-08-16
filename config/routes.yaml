@@ -11,11 +11,11 @@ addCountry:
   controller: App\Controller\Country\AddController
 
 editCountry:
-  path: /editCountry
+  path: /editCountry/{id}
   controller: App\Controller\Country\EditController
 
 deleteCountry:
-  path: /deleteCountry
+  path: /deleteCountry/{id}
   controller: App\Controller\Country\DeleteCountry
 
 fetchCountries:

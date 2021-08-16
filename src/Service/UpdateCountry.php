@@ -3,6 +3,7 @@
 namespace App\Service;
 
 use App\Repository\CountryRepository;
+use Symfony\Component\Validator\Constraints\Country;
 
 class UpdateCountry
 {
@@ -12,7 +13,7 @@ class UpdateCountry
     {
     }
 
-    public function update()
+    public function update(Country $country, string $flagSource = null)
     {
         $this->countryRepository->update();
     }
