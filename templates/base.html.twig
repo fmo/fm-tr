@@ -14,6 +14,31 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-2">
+                    <a href=""{{ path('admin') }}">
+                        <img width="200" height="200" src="{{ asset('images/logo.png') }}" />
+                    </a>
+
+                    <br /> <br />
+
+                    <nav class="nav flex-column nav-pills">
+                        <h6>Rapid Api</h6>
+                        <a class="nav-link" href="{{ path('fetchCountries') }}">Fetch Countries</a>
+
+                        <br />
+
+                        <h6>Countries</h6>
+                        <a class="nav-link" href="{{  path('addCountry') }}">Add One</a>
+                        <a class="nav-link" href="{{ path('countries') }}" >List All</a>
+                    </nav>
+
+                    <div class="col-10">
+                        {% block body %}{% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
