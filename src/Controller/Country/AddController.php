@@ -34,7 +34,7 @@ class AddController extends AbstractController
             }
         }
 
-        return $this->render('addCountry',[
+        return $this->render('Country/add.html.twig',[
             'form' => $form->createView()
         ]);
     }

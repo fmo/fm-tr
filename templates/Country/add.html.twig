@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h1 class="h3 mb-3 font-weight-normal">Add Country</h1>
+
+    <hr />
+
+    {% for message in app.flashes('notice') %}
+
+        <div class="alert alert-primary" role="alert">
+            {{ message }}
+        </div>
+
+    {% endfor %}
+
+    {{ form_start(form) }}
+
+    <div class="my-customer-class-for-errors">
+        {{ form_errors(form) }}
+    </div>
+
+    <div class="row" style="height: 80px">
+        <div class="col">
+            {{ form_label(form.name, 'Country Name:', {'label_attr': {'class': 'form-label'}}) }}
+            {{  form_widget(form.name) }}
+        </div>
+    </div>
+
+    <div class="row" style="height: 80px">
+        <div class="col">
+            {{ form_label(form.flag, 'Flag:', {'label_attr': {'class': 'form-label'}}) }}
+            {{ form_widget(form.flag) }}
+        </div>
+    </div>
+
+    {{ form_end(form) }}
+
+{% endblock %}
+
+{% block title %}
+
+{% endblock %}
