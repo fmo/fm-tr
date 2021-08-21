@@ -1,0 +1,35 @@
+{% extends "base.html.twig" %}
+
+
+{% block body %}
+
+    <h3>List Countries</h3>
+
+    <hr />
+
+    {% for message in app.flashes('notice') %}
+
+        <div class="alert alert-primary" role="alert">
+            {{ message }}
+        </div>
+
+    {% endfor %}
+
+    <table class="table table-striped">
+        {% for country in countries %}
+
+            <tr>
+                <td><img src="{{ country.flag }}" width="30" height="30"></td>
+                <td>
+                    {{ country.name }}
+                </td>
+                <td>
+                    <a href="{{ path('editCountry', {id: country.id}) }}">Edit</a> |
+                    <a href="{{ path('deleteCountry', {id: country.id}) }}">Delete</a>
+                </td>
+            </tr>
+
+        {% endfor %}
+    </table>
+
+{% endblock %}
