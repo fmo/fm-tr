@@ -16,7 +16,7 @@ editCountry:
 
 deleteCountry:
   path: /removeCountry/{id}
-  controller: App\Controller\Country\RemoveCountry
+  controller: App\Controller\Country\RemoveController
 
 fetchCountries:
   path: fetch-countries

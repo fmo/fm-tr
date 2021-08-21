@@ -36,7 +36,7 @@ class EditController extends AbstractController
             return $this->redirect($this->generateUrl('countries'));
         }
 
-        return $this->render('country/edit.html.twig', ['form' => $form->createView()]);
+        return $this->render('Country/edit.html.twig', ['form' => $form->createView()]);
 
     }
 
