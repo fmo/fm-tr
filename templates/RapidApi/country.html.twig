@@ -1,0 +1,25 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+    <h3>List Countries</h3>
+
+    <hr />
+
+    <table class="table table-striped">
+        {% for country in countries %}
+            <tr>
+                <td>
+                    <img src="{{ country.flag }}" width="100" height="100">
+                </td>
+                <td>
+                    {{ country.name }}
+                </td>
+                <td>
+                    {{ country.flag }}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}
