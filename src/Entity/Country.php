@@ -9,6 +9,8 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Country
 {
+    const FLAG_STORAGE = "https://league-country-flags.s3.eu-central-1.amazonaws.com/";
+
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
